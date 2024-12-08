@@ -1,0 +1,9 @@
+README.md
+setup.py
+SegundaEntregaCoder.egg-info/PKG-INFO
+SegundaEntregaCoder.egg-info/SOURCES.txt
+SegundaEntregaCoder.egg-info/dependency_links.txt
+SegundaEntregaCoder.egg-info/top_level.txt
+modulos/__init__.py
+modulos/sistema.py
+modulos/usuarios.py

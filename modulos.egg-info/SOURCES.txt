@@ -1,0 +1,9 @@
+README.md
+setup.py
+modulos/__init__.py
+modulos/sistema.py
+modulos/usuarios.py
+modulos.egg-info/PKG-INFO
+modulos.egg-info/SOURCES.txt
+modulos.egg-info/dependency_links.txt
+modulos.egg-info/top_level.txt
