@@ -12,18 +12,19 @@ class Usuario:
     def mostrar_informacion(self):
         return (f"Nombre: {self.nombre}\n"
                 f"Usuario: {self.usuario}\n"
+                f"Contraseña: {self.contrasena}\n"
                 f"Teléfono: {self.telefono}\n"
                 f"Cédula: {self.cedula}")
 
     def cambiar_contrasena(self, nueva_contrasena):
-        if len(nueva_contrasena) < 6:
-            return "La nueva contraseña debe tener al menos 6 caracteres."
+        if len(nueva_contrasena) < 4:
+            return "La nueva contraseña debe tener al menos 4 caracteres."
         self.contrasena = nueva_contrasena
         return "Contraseña actualizada con éxito."
 
     def actualizar_telefono(self, nuevo_telefono):
-        if not nuevo_telefono.isdigit() or len(nuevo_telefono) != 10:
-            return "El número de teléfono debe contener 10 dígitos."
+        if not nuevo_telefono.isdigit() or len(nuevo_telefono) != 9:
+            return "El número de teléfono debe contener 9 dígitos."
         self.telefono = nuevo_telefono
         return f"Número de teléfono actualizado a: {self.telefono}"
 

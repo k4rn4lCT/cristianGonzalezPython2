@@ -42,12 +42,13 @@ class Sistema:
         return "\n".join(usuarios_info)
     
     def login(self, usuario, contrasena):
-        cliente = self.bd.get(usuario)
-        if not cliente:
-            return "Error: Usuario no encontrado."
-        if cliente.contrasena != contrasena:
-            return "Error: Contraseña incorrecta."
-        return f"Bienvenido, {cliente.nombre}!"
+        if usuario in self.bd:
+            usuario_obj = self.bd[usuario]
+            if usuario_obj.contrasena == contrasena:
+                return usuario_obj
+            else:
+                return "Contraseña incorrecta."
+        return "Usuario no encontrado."
     
     def guardar_usuarios(self, archivo="usuarios.txt"):
         try:
